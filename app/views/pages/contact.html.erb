@@ -1,1 +1,10 @@
 <h1>Contact Us</h1>
+
+<% members = ["verity", "benoit"] %>
+
+<h2>Meet our team</h2>
+<ul>
+  <% members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
