@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @members = ["verity", "benoit"]
   end
 end
