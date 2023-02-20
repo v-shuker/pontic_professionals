@@ -1,9 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
-
+  skip_before_action :authenticate_user!
   def index
-    flash[:notice] = "Logged in successfully ✅"
-    flash[:alert] = "Invalid email or password 🚫"
   end
 
   def about
