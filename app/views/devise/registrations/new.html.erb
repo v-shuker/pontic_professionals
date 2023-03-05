@@ -17,6 +17,8 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :nurse, label: "Dental Nurse" %>
+    <%= f.input :practice, label: "Dental Practice or Manager" %>
   </div>
 
   <div class="form-actions">
