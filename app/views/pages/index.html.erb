@@ -1,4 +1,9 @@
-<div class="d-flex align-items-center justify-content-center">
+<div class="brand-name">
   <h1>Pontic Professionals</h1>
   <p>Bridging the gap.</p>
+    <% if current_user&.nurse? %>
+      <h3>Hello Nurse!</h3> # partial
+    <% elsif current_user&.practice? %>
+      <h3>Hello Practice Manager!</h3> # partial
+    <% end %>
 </div>
