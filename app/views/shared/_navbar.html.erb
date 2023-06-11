@@ -19,12 +19,14 @@
           <li class="nav-item-bookings">
             <%= link_to "Contact Us", contact_path, class: "nav-link" %>
           </li>
-          <% if user_signed_in? %>
+          <% if user_signed_in? && current_user&.nurse? %>
           <li class="nav-item dropdown">
               <%= image_tag "https://avatars.githubusercontent.com/u/107935328?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Action", "#", class: "dropdown-item" %>
-                <%= link_to "Another action", "#", class: "dropdown-item" %>
+                <%= link_to "Profile", "#", class: "dropdown-item" %>
+                <%= link_to "Availability", "#", class: "dropdown-item" %>
+                <%= link_to "Booking requests", "#", class: "dropdown-item" %>
+                <%= link_to "Confirmed bookings", "#", class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item" %>
               </div>
             </li>
