@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Home | Pontic Professionals</title>
-  </head>
-  <body>
-    <div class="brand-name">
-      <h1>Pontic Professionals</h1>
-      <p>Bridging the gap.</p>
-        <% if current_user&.nurse? %>
-          <h3>Hello Nurse!</h3> # partial
-        <% elsif current_user&.practice? %>
-          <h3>Hello Practice Manager!</h3> # partial
-        <% end %>
-    </div>
-  </body>
-</html>
+<% provide(:title, "Home") %>
+<div class="brand-name">
+  <h1>Pontic Professionals</h1>
+  <p>Bridging the gap.</p>
+    <% if current_user&.nurse? %>
+      <h3>Hello Nurse!</h3> # partial
+    <% elsif current_user&.practice? %>
+      <h3>Hello Practice Manager!</h3> # partial
+    <% end %>
+</div>
