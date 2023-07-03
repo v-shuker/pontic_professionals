@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Contact Us | Pontic Professionals</title>
-  </head>
-  <body>
-    <h1>Contact Us</h1>
+<% provide(:title, "Contact Us") %>
 
-    <% members = ["verity", "benoit"] %>
+<h1>Contact Us</h1>
 
-    <h2>Meet our team</h2>
-    <ul>
-      <% members.each do |member| %>
-        <li><%= member.capitalize %></li>
-      <% end %>
-    </ul>
-  </body>
-</html>
+<% members = ["verity", "benoit"] %>
+
+<h2>Meet our team</h2>
+<ul>
+  <% members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
